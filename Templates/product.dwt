@@ -35,24 +35,35 @@
 		<div class="container my-3">
         	<div class="row">
            	 	<div class="col-4">
-             	  <!-- TemplateBeginEditable name="productImage" -->
-				  <img src="../Images/placeholder.jpeg" alt="Product Image" class="img-fluid">
-				  <!-- TemplateEndEditable -->
+				  	<img id="productImageURL" src="#" alt="Product Image" class="img-fluid">
             	</div>
             	<div class="col-6">
-                <h2>
-					<!-- TemplateBeginEditable name="productName" -->Product Name<!-- TemplateEndEditable -->
-				</h2>
-                <p class="productDescription">
-					<!-- TemplateBeginEditable name="productDescription" -->Description: Lorem ipsum dolor sit amet...<!-- TemplateEndEditable -->
-				</p>
+                <h2 id="productName"></h2>
+                <p id="productDescription" class="productDescription"></p>
 				</div>
            		<div class="col-2">
-					<h3><!-- TemplateBeginEditable name="productPrice" -->$99.99<!-- TemplateEndEditable --></h3>
+					<h3 id="productPrice"></h3>
 					<button class="btn btn-lg btn-outline-dark mt-1">Add to Cart</button>
 			  	</div>
         	</div>
     	</div>
+		
+		<script src="../JavaScript/products.js" type="text/javascript"></script>
+		<script>
+        	document.addEventListener("DOMContentLoaded", function() {
+				// Find product in products array
+				<!-- TemplateBeginEditable name="productID" -->
+				const product = products.find((p) => p.id === productID);
+				<!-- TemplateEndEditable -->
+            	// Populate the template with product data
+				document.getElementById("productName").textContent = product.name;
+            	document.getElementById("productPrice").textContent = `$${product.price.toFixed(2)}`;
+				document.getElementById("productImageURL").src = `../${product.imageURL}`;
+				document.getElementById("productDescription").textContent = product.description;
+				
+				document.title += ` - ${product.name}`;
+        	});
+		</script>
 		<!-- InstanceEndEditable -->
 		
 		<!-- Bootstrap JS -->
