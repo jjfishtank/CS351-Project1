@@ -1,24 +1,42 @@
 const products = [
   {
-    name: "Fancy Product 1",
+    name: "A.I. Smart Watch",
     id: 1,
-    price: 99.99,
-    imageURL: "Images/placeholder.jpeg",
-    description: ""
+    price: 599.99,
+    imageURL: "Images/smartwatch.jpg",
+    description: `
+	<ul>
+		<li>Machine learning powered assistant</li>
+		<li>up to 20 hours of battery life</li>
+		<li>Fitness and goal tracking</li>
+	</ul>
+	`
   },
   {
-    name: "Fancy Product 2",
+    name: "Drone Quadcopter UAV",
 	id: 2,
-    price: 99.99,
-    imageURL: "Images/placeholder.jpeg",
-    description: ""
+    price: 749.99,
+    imageURL: "Images/drone.jpg",
+    description: `
+	<ul>
+		<li>8k HDR video camera</li>
+		<li>10km range</li>
+		<li>Automatic obstacle avoidance</li>
+	</ul>
+	`
   },
   {
-    name: "Fancy Product 3",
+    name: "Portable Bluetooth Speaker",
 	id: 3,
-    price: 99.99,
-    imageURL: "Images/placeholder.jpeg",
-    description: ""
+    price: 54.95,
+    imageURL: "Images/btspeaker.jpg",
+    description: `
+	<ul>
+		<li>Wireless Bluetooth streaming</li>
+		<li>IPX7 waterproof</li>
+		<li>Up to 20 hours of playtime</li>
+	</ul>
+	`
   },
   {
     name: "Fancy Product 4",
