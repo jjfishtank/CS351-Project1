@@ -58,7 +58,7 @@
 				document.getElementById("productName").textContent = product.name;
             	document.getElementById("productPrice").textContent = `$${product.price.toFixed(2)}`;
 				document.getElementById("productImageURL").src = `../${product.imageURL}`;
-				document.getElementById("productDescription").textContent = product.description;
+				document.getElementById("productDescription").innerHTML = product.description;
 				
 				document.title += ` - ${product.name}`;
         	});
